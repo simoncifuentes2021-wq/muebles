@@ -271,19 +271,19 @@ const featuredProducts = [
     id: "sofa-moderno",
     name: "Sofá Moderno",
     price: "1,299",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/sillon_elegante.jpg?height=400&width=400",
   },
   {
     id: "mesa-comedor",
     name: "Mesa de Comedor",
     price: "899",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/mesa_comedor.webp?height=400&width=400",
   },
   {
     id: "silla-ergonomica",
     name: "Silla Ergonómica",
     price: "299",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/silla_ergonomica.jpg?height=400&width=400",
   },
 ]
 
