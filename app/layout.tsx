@@ -10,9 +10,11 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Muebles Elegantes | Calidad y Diseño para tu Hogar",
-  description: "Descubre nuestra colección de muebles de alta calidad diseñados para transformar tu espacio.",
-    generator: 'v0.dev'
+  title: "Muebles Yireh",
+  description: "Muebles de calidad y diseño exclusivo.",
+  icons: {
+    icon: "/logo.png", // o .png si estás usando favicon.png
+  },
 }
 
 export default function RootLayout({

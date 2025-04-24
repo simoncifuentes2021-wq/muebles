@@ -30,8 +30,8 @@ export default function NosotrosPage() {
             artesanía nos ha permitido crear piezas únicas que perduran en el tiempo.
           </p>
         </div>
-        <div className="relative h-[400px] rounded-lg overflow-hidden">
-          <Image src="/placeholder.svg?height=800&width=600" alt="Nuestro taller" fill className="object-cover" />
+        <div className="relative h-[500px] rounded-lg overflow-hidden">
+          <Image src="/logo.png?height=800&width=600" alt="Nuestro taller" fill className="object-cover" />
         </div>
       </div>
 
