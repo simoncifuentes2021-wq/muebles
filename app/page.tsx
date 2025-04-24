@@ -268,10 +268,10 @@ export default function Home() {
 // Sample data
 const featuredProducts = [
   {
-    id: "sofa-moderno",
-    name: "Sofá Moderno",
+    id: "tele",
+    name: "Mueble TV Raíz Natural",
     price: "1,299",
-    image: "/sillon_elegante.jpg?height=400&width=400",
+    image: "/tele1.png?height=400&width=400",
   },
   {
     id: "mesa-comedor",

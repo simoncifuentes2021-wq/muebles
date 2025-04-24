@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { SheetTitle, SheetDescription } from "@/components/ui/sheet"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -90,6 +91,10 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="pr-0 border-l-primary/20">
+              <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
+              <SheetDescription className="sr-only">
+                Usa este menú para navegar por las secciones principales del sitio.
+              </SheetDescription>
               <div className="flex items-center justify-between mb-8">
                 <Link href="/" className="font-bold text-xl flex items-center" onClick={() => setIsOpen(false)}>
                   <svg
