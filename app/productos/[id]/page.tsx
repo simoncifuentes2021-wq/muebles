@@ -18,6 +18,8 @@ export default function ProductDetailPage() {
   const [currentImage, setCurrentImage] = useState(0)
   const headerRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const [isZoomOpen, setIsZoomOpen] = useState(false)
+
 
   const headerInView = typeof window !== "undefined" ? useInView(headerRef, { once: true }) : false
   const contentInView = typeof window !== "undefined" ? useInView(contentRef, { once: true }) : false
@@ -52,7 +54,10 @@ export default function ProductDetailPage() {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
-          <div className="overflow-hidden rounded-2xl border">
+          <div
+            className="overflow-hidden rounded-2xl border cursor-pointer"
+            onClick={() => setIsZoomOpen(true)}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentImage}
@@ -71,6 +76,7 @@ export default function ProductDetailPage() {
               </motion.div>
             </AnimatePresence>
           </div>
+
           <div className="grid grid-cols-4 gap-4">
             {productImages.map((img, i) => (
               <motion.div
@@ -231,6 +237,28 @@ export default function ProductDetailPage() {
           </Tabs>
         </motion.div>
       </div>
+      {isZoomOpen && (
+  <div
+    className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
+    onClick={() => setIsZoomOpen(false)}
+  >
+    <div className="relative w-full max-w-4xl h-[80vh]">
+      <Image
+        src={productImages[currentImage] || "/placeholder.svg"}
+        alt={`${product.name} - Zoom`}
+        fill
+        className="object-contain rounded-lg"
+      />
+      <button
+        onClick={() => setIsZoomOpen(false)}
+        className="absolute top-4 right-4 text-white text-xl bg-black/50 px-2 rounded"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+)}
+
     </div>
   )
 }
@@ -370,5 +398,145 @@ const products = [
       "/camarote4.jpeg",
     ],
   },
+
+  {
+    id: "cocina3",
+    name: "Mueble Cocina Nogal",
+    category: "Comedor",
+    price: "799",
+    description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
+    fullDescription:
+      "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
+    features: [
+      "Respaldo reclinable para mayor comodidad",
+      "Soporte lumbar ajustable",
+      "Reposabrazos acolchonados",
+      "Base giratoria y con ruedas",
+    ],
+    dimensions: ["Largo: 60 cm", "Ancho: 60 cm", "Alto: 120 cm", "Altura del asiento: 45-55 cm"],
+    images: [
+      "/Mcocina.jpeg",
+      "/Mcocina2.jpeg",
+      "/Mcocina3.jpeg",
+      "/Mcocina4.jpeg",
+    ],
+  },
+
+
+  {
+    id: "cocina4",
+    name: "Mueble Modular Gris Claro",
+    category: "Comedor",
+    price: "799",
+    description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
+    fullDescription:
+      "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
+    features: [
+      "Respaldo reclinable para mayor comodidad",
+      "Soporte lumbar ajustable",
+      "Reposabrazos acolchonados",
+      "Base giratoria y con ruedas",
+    ],
+    dimensions: ["Largo: 60 cm", "Ancho: 60 cm", "Alto: 120 cm", "Altura del asiento: 45-55 cm"],
+    images: [
+      "/modular1.jpeg",
+      "/modular2.jpeg",
+      "/modular3.jpeg",
+      "/modular4.jpeg",
+    ],
+  },
+
+  {
+    id: "9",
+    name: "Mueble Cocina Nogal",
+    category: "Comedor",
+    price: "799",
+    description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
+    fullDescription:
+      "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
+    features: [
+      "Respaldo reclinable para mayor comodidad",
+      "Soporte lumbar ajustable",
+      "Reposabrazos acolchonados",
+      "Base giratoria y con ruedas",
+    ],
+    dimensions: ["Largo: 60 cm", "Ancho: 60 cm", "Alto: 120 cm", "Altura del asiento: 45-55 cm"],
+    images: [
+      "/9.jpeg",
+      "/9.1.jpeg",
+      "/9.2.jpeg",
+      "/9.3.jpeg",
+    ],
+  },
+
+  {
+    id: "10",
+    name: "Closet Raíz Elegante",
+    category: "Dormitorio",
+    price: "799",
+    description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
+    fullDescription:
+      "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
+    features: [
+      "Respaldo reclinable para mayor comodidad",
+      "Soporte lumbar ajustable",
+      "Reposabrazos acolchonados",
+      "Base giratoria y con ruedas",
+    ],
+    dimensions: ["Largo: 60 cm", "Ancho: 60 cm", "Alto: 120 cm", "Altura del asiento: 45-55 cm"],
+    images: [
+      "/10.1.jpeg",
+      "/10.2.jpeg",
+      "/10.3.jpeg",
+      "/10.4.jpeg",
+    ],
+  },
+
+  {
+    id: "11",
+    name: "Closet Roble",
+    category: "Dormitorio",
+    price: "799",
+    description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
+    fullDescription:
+      "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
+    features: [
+      "Respaldo reclinable para mayor comodidad",
+      "Soporte lumbar ajustable",
+      "Reposabrazos acolchonados",
+      "Base giratoria y con ruedas",
+    ],
+    dimensions: ["Largo: 60 cm", "Ancho: 60 cm", "Alto: 120 cm", "Altura del asiento: 45-55 cm"],
+    images: [
+      "/11.1.jpeg",
+      "/11.2.jpeg",
+      "/11.3.jpeg",
+      "/11.4.jpeg",
+    ],
+  },
+
+  {
+    id: "12",
+    name: "Mueble Lavaplatos Veta Clara",
+    category: "Dormitorio",
+    price: "799",
+    description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
+    fullDescription:
+      "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
+    features: [
+      "Respaldo reclinable para mayor comodidad",
+      "Soporte lumbar ajustable",
+      "Reposabrazos acolchonados",
+      "Base giratoria y con ruedas",
+    ],
+    dimensions: ["Largo: 60 cm", "Ancho: 60 cm", "Alto: 120 cm", "Altura del asiento: 45-55 cm"],
+    images: [
+      "/12.1.jpeg",
+      "/12.2.jpeg",
+      "/12.3.jpeg",
+      "/12.4.jpeg",
+    ],
+  },
+  
 ]
 

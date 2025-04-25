@@ -245,7 +245,7 @@ export default function Home() {
               <div className="flex items-center space-x-4">
                 <div className="h-12 w-12 overflow-hidden rounded-full bg-muted">
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
+                    src="/reseña.png?height=100&width=100"
                     alt="Foto de cliente"
                     width={48}
                     height={48}
@@ -274,16 +274,16 @@ const featuredProducts = [
     image: "/tele1.png?height=400&width=400",
   },
   {
-    id: "mesa-comedor",
-    name: "Mesa de Comedor",
+    id: "camarote",
+    name: "Camarote Raíz Doble",
     price: "899",
-    image: "/mesa_comedor.webp?height=400&width=400",
+    image: "/camarote1.png?height=400&width=400",
   },
   {
-    id: "silla-ergonomica",
-    name: "Silla Ergonómica",
+    id: "cocina1",
+    name: "Cocina Raíz Noble",
     price: "299",
-    image: "/silla_ergonomica.jpg?height=400&width=400",
+    image: "/cocina1.png?height=400&width=400",
   },
 ]
 

@@ -1,10 +1,11 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
 import { Mail } from "lucide-react"
+
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -12,9 +13,17 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function ProductosPage() {
   const headerRef = useRef<HTMLDivElement>(null)
   const productsRef = useRef<HTMLDivElement>(null)
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 6
 
   const headerInView = useInView(headerRef, { once: true })
   const productsInView = useInView(productsRef, { once: false, amount: 0.1 })
+  const totalPages = Math.ceil(products.length / itemsPerPage)
+  const paginatedProducts = products.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  )
+
 
   return (
     <div className="container py-12 md:py-16">
@@ -36,7 +45,9 @@ export default function ProductosPage() {
       </motion.div>
 
       <motion.div ref={productsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-        {products.map((product, index) => (
+        {paginatedProducts.map((product, index) => (
+
+
           <motion.div
             key={product.id}
             initial={{ opacity: 0, y: 30 }}
@@ -79,6 +90,28 @@ export default function ProductosPage() {
           </motion.div>
         ))}
       </motion.div>
+      <div className="mt-10 flex justify-center gap-4">
+      <Button
+        onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+        disabled={currentPage === 1}
+        variant="outline"
+        className="rounded-full"
+      >
+        Anterior
+      </Button>
+      <span className="text-sm text-muted-foreground pt-2">
+        Página {currentPage} de {totalPages}
+      </span>
+      <Button
+        onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+        disabled={currentPage === totalPages}
+        variant="outline"
+        className="rounded-full"
+      >
+        Siguiente
+      </Button>
+    </div>
+
     </div>
   )
 }
@@ -133,7 +166,61 @@ const products = [
     description: "Sillón reclinable con mecanismo suave y tapizado de alta resistencia.",
     image: "/camarote1.png?height=400&width=400",
   },
+
+  {
+    id: "cocina3",
+    name: "Mueble Cocina Nogal",
+    category: "Comerdor",
+    price: "799",
+    description: "Sillón reclinable con mecanismo suave y tapizado de alta resistencia.",
+    image: "/Mcocina.jpeg?height=400&width=400",
+  },
   
+  {
+    id: "cocina4",
+    name: "Mueble Modular Gris Claro",
+    category: "Comerdor",
+    price: "799",
+    description: "Sillón reclinable con mecanismo suave y tapizado de alta resistencia.",
+    image: "/modular1.jpeg?height=400&width=400",
+  },
+  
+  {
+    id: "9",
+    name: "Mueble Cocina Nogal",
+    category: "Comerdor",
+    price: "799",
+    description: "Sillón reclinable con mecanismo suave y tapizado de alta resistencia.",
+    image: "/9.jpeg?height=400&width=400",
+  },
+  
+
+  {
+    id: "10",
+    name: "Closet Raíz Elegante",
+    category: "Dormitorio",
+    price: "799",
+    description: "Sillón reclinable con mecanismo suave y tapizado de alta resistencia.",
+    image: "/10.1.jpeg?height=400&width=400",
+  },
+
+  {
+    id: "11",
+    name: "Closet Roble",
+    category: "Dormitorio",
+    price: "799",
+    description: "Sillón reclinable con mecanismo suave y tapizado de alta resistencia.",
+    image: "/11.1.jpeg?height=400&width=400",
+  },
+
+  {
+    id: "12",
+    name: "Mueble Lavaplatos Veta Clara",
+    category: "Dormitorio",
+    price: "799",
+    description: "Sillón reclinable con mecanismo suave y tapizado de alta resistencia.",
+    image: "/12.1.jpeg?height=400&width=400",
+  },
   
 ]
 

@@ -101,19 +101,19 @@ const team = [
     name: "Carlos Rodríguez",
     position: "Fundador y Director",
     bio: "Con más de 20 años de experiencia en diseño de muebles, Carlos fundó la empresa con la visión de crear piezas únicas y funcionales.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/fundador.png?height=400&width=400",
   },
   {
     name: "Ana Martínez",
     position: "Diseñadora Jefe",
     bio: "Ana combina su formación en diseño industrial con su pasión por la estética para crear muebles que son tanto hermosos como prácticos.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/diseñador.png?height=400&width=400",
   },
   {
     name: "Miguel Sánchez",
     position: "Maestro Carpintero",
     bio: "Miguel aporta décadas de experiencia en carpintería tradicional, asegurando que cada pieza cumpla con los más altos estándares de calidad.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/maestro.png?height=400&width=400",
   },
 ]
 
