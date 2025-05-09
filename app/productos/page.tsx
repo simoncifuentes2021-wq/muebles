@@ -123,7 +123,7 @@ const products = [
     name: "Mueble TV Raíz Natural",
     category: "Sala",
     price: "1,299",
-    description: "Sofá de 3 plazas con tapizado premium y estructura de madera maciza.",
+    description: "Mueble de TV de madera con cajón y dos puertas. ",
     image: "/tele1.png?height=400&width=400",
   },
   {
@@ -131,7 +131,7 @@ const products = [
     name: "Cocina Raíz Noble",
     category: "Comedor",
     price: "899",
-    description: "Mesa de comedor extensible para 6-8 personas con acabado en roble natural.",
+    description: "Mueble de cocina de madera con lavaplatos doble, tres cajones y puertas inferiores.",
     image: "/cocina1.png?height=400&width=400",
   },
   {
@@ -139,7 +139,7 @@ const products = [
     name: "Cocina Natura Loft",
     category: "Comedor",
     price: "299",
-    description: "Silla de oficina con soporte lumbar y ajustes de altura e inclinación.",
+    description: "Mueble de cocina con lavaplatos doble, tres cajones y una puerta lateral.",
     image: "/cocina2.1.png?height=400&width=400",
   },
   {
@@ -147,7 +147,7 @@ const products = [
     name: "Cómoda Luna Clara",
     category: "Dormitorio",
     price: "1,499",
-    description: "Cama king size con cabecero tapizado y base de madera resistente.",
+    description: "Cómoda de 4 cajones con diseño moderno y acabado en tono madera clara, ideal para dormitorios o espacios de almacenamiento.",
     image: "/comoda1.png?height=400&width=400",
   },
   {
@@ -155,7 +155,7 @@ const products = [
     name: "Velador Luna Nórdica",
     category: "Dormitorio",
     price: "599",
-    description: "Estantería modular personalizable con múltiples configuraciones posibles.",
+    description: "Velador moderno con un cajón y espacio abierto, ideal para complementar tu dormitorio con estilo y funcionalidad.",
     image: "/velador2.jpeg?height=400&width=400",
   },
   {

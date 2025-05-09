@@ -43,18 +43,24 @@ export function Footer() {
               mejoren tu calidad de vida.
             </p>
             <div className="flex items-center gap-4 mt-2">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-primary" />
-                +123 456 7890
-              </div>
+            <div className="flex flex-col space-y-2">
+            <div className="flex items-center space-x-2">
+              <Phone className="h-4 w-4 text-primary" />
+              <span>+56997806420</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Phone className="h-4 w-4 text-primary" />
+              <span>+56949647318</span>
+            </div>
+            </div>
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Mail className="h-4 w-4 text-primary" />
-              info@muebleselegantes.com
+              Y.huitraiqueoing@gmail.com
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />
-              Av. Principal 123, Ciudad
+              Sotomayor 3000, Nueva Imperial
             </div>
           </motion.div>
 

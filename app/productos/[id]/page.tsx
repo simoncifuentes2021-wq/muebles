@@ -7,6 +7,8 @@ import { notFound } from "next/navigation"
 import { motion, AnimatePresence, useInView } from "framer-motion"
 import { ArrowLeft, Check, Mail, Star, Truck } from "lucide-react"
 import { useParams } from "next/navigation"
+import { Share2 } from "lucide-react"
+
 
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -35,6 +37,18 @@ export default function ProductDetailPage() {
     "/placeholder.svg?height=800&width=800",
     "/placeholder.svg?height=800&width=800",
   ]
+  function handleShare(product: typeof products[0]) {
+    if (navigator.share) {
+      navigator.share({
+        title: product.name,
+        text: `Revisa este producto: ${product.name}`,
+        url: typeof window !== "undefined" ? window.location.href : "",
+      })
+    } else {
+      alert("La función de compartir no está disponible en este navegador.")
+    }
+  }
+  
 
   return (
     <div className="container py-10 lg:py-16">
@@ -186,6 +200,21 @@ export default function ProductDetailPage() {
               </Button>
             </Link>
           </motion.div>
+          <motion.div
+  initial={{ opacity: 0, x: -20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.5, delay: 0.5 }}
+  className="flex justify-center"
+>
+  <button
+    onClick={() => handleShare(product)}
+    className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+  >
+    <Share2 className="h-4 w-4" />
+    Compartir este producto
+  </button>
+</motion.div>
+
 
           <Separator />
 
@@ -272,7 +301,7 @@ const products = [
     price: "1,299",
     description: "Sofá de 3 plazas con tapizado premium y estructura de madera maciza.",
     fullDescription:
-      "Este sofá moderno combina estilo y comodidad en un diseño contemporáneo que se adapta a cualquier decoración. Fabricado con materiales de alta calidad, cuenta con una estructura de madera maciza que garantiza durabilidad y estabilidad. El tapizado premium está disponible en varios colores para adaptarse a tu estilo personal.",
+      "Este elegante mueble de TV está fabricado en madera sólida con un acabado natural que resalta su veta y calidez. Cuenta con un diseño funcional y minimalista que incluye dos puertas laterales con espacio de almacenamiento interno, un cajón central amplio ideal para guardar accesorios, y una repisa abierta perfecta para decodificadores, consolas o libros. Su estilo atemporal lo hace ideal para salas modernas o rústicas, combinando estética y practicidad en un solo mueble.",
     features: [
       "Estructura de madera maciza de pino",
       "Tapizado en tela de alta resistencia al desgaste",
@@ -295,7 +324,7 @@ const products = [
     price: "399",
     description: "Silla elegante con asiento de cuero y estructura metálica.",
     fullDescription:
-      "Con un diseño minimalista y elegante, esta silla es perfecta para tu comedor o estudio. El asiento está tapizado en cuero sintético de alta calidad y su estructura metálica es resistente y estilizada.",
+      "Este práctico y resistente mueble de cocina está fabricado en madera natural y cuenta con un diseño funcional que incluye un lavaplatos doble de acero inoxidable, tres cajones laterales para utensilios y dos puertas con amplio espacio interior para almacenamiento. Ideal para optimizar el orden en cocinas pequeñas o medianas, su estructura robusta y acabado cálido lo convierten en una opción duradera y decorativa para cualquier hogar.",
     features: [
       "Asiento tapizado en cuero sintético",
       "Estructura metálica en acabado dorado",
@@ -317,7 +346,7 @@ const products = [
     price: "899",
     description: "Mesa de comedor estilo industrial con superficie de madera y patas metálicas.",
     fullDescription:
-      "Esta mesa de comedor de estilo industrial es perfecta para un ambiente moderno y sofisticado. Su superficie de madera maciza está combinada con patas metálicas de acabado envejecido, lo que le da un toque rústico y elegante al mismo tiempo.",
+      "Este mueble de cocina combina funcionalidad y diseño natural en un solo producto. Fabricado en madera maciza con un atractivo acabado rústico, cuenta con un lavaplatos doble de acero inoxidable, tres cajones deslizables ideales para utensilios o implementos pequeños, y una puerta lateral con espacio interior para almacenamiento. Es una solución práctica y estética para cocinas que buscan orden, durabilidad y calidez visual.",
     features: [
       "Superficie de madera maciza de roble",
       "Patas metálicas con acabado envejecido",
@@ -339,7 +368,7 @@ const products = [
     price: "1990",
     description: "Lámpara de mesa de diseño minimalista con base de concreto.",
     fullDescription:
-      "La lámpara minimalista aporta un toque moderno a cualquier espacio con su diseño simple y elegante. La base de concreto proporciona estabilidad y el estilo limpio se adapta a cualquier ambiente.",
+      "Organiza tus espacios con estilo y funcionalidad gracias a esta elegante cómoda de 4 cajones. Su diseño combina un cuerpo en tono blanco con frentes de cajón en melamina tipo madera clara, logrando un acabado moderno y cálido que se adapta a cualquier ambiente. Cada cajón cuenta con tiradores metálicos curvos de fácil agarre y correderas suaves que aseguran una apertura cómoda y silenciosa. Perfecta para guardar ropa, accesorios o artículos personales, esta cómoda destaca por su firmeza, buena capacidad de almacenamiento y estética sencilla pero refinada. Ideal para dormitorios, salas o cualquier rincón que necesite orden y diseño.",
     features: [
       "Base de concreto resistente",
       "Pantalla de tela con acabado suave",
@@ -361,7 +390,7 @@ const products = [
     price: "499",
     description: "Estante flotante con estantes de vidrio y estructura metálica.",
     fullDescription:
-      "Este estante flotante ofrece una estética moderna y funcional, con estantes de vidrio transparentes y una estructura metálica resistente que puede soportar una variedad de objetos decorativos o libros.",
+      "Este velador de diseño contemporáneo es la solución perfecta para mantener el orden en tu dormitorio sin sacrificar estilo. Con una estructura robusta en color blanco y detalles en tono madera clara con bordes oscuros, ofrece un atractivo contraste visual. Cuenta con un cajón amplio con tirador negro, ideal para guardar objetos personales, y una repisa inferior abierta que permite almacenar libros, accesorios o elementos decorativos. Su tamaño compacto lo hace ideal para espacios reducidos, pero su diseño moderno y funcionalidad lo convierten en un mueble versátil que encaja en cualquier ambiente. Fabricado en melamina de alta calidad, es fácil de limpiar y resistente al uso diario.",
     features: [
       "Estantes de vidrio templado",
       "Estructura metálica con acabado mate",

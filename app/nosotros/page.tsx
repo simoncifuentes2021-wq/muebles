@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
 import { Award, Clock, Heart, Users } from "lucide-react"
+import { motion } from "framer-motion"
 
 import { Separator } from "@/components/ui/separator"
 
@@ -7,13 +10,17 @@ export default function NosotrosPage() {
   return (
     <div className="container py-10">
       {/* Hero Section */}
-      <div className="flex flex-col gap-4 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col gap-4 text-center"
+      >
         <h1 className="text-3xl font-bold">Sobre Nosotros</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Somos una empresa dedicada a la creación de muebles de alta calidad que combinan diseño, funcionalidad y
-          durabilidad.
+          Somos una empresa dedicada a la creación de muebles de alta calidad...
         </p>
-      </div>
+      </motion.div>
 
       {/* Story Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 items-center">
@@ -54,21 +61,29 @@ export default function NosotrosPage() {
       <Separator className="my-20" />
 
       {/* Team Section */}
-      <div>
+        <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className="text-2xl font-bold text-center mb-10">Nuestro Equipo</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member) => (
-            <div key={member.name} className="flex flex-col items-center text-center">
+            <motion.div
+              key={member.name}
+              whileHover={{ scale: 1.03 }}
+              className="flex flex-col items-center text-center"
+            >
               <div className="relative h-64 w-64 rounded-full overflow-hidden mb-4">
                 <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
               </div>
               <h3 className="text-xl font-bold">{member.name}</h3>
               <p className="text-primary mb-2">{member.position}</p>
               <p className="text-muted-foreground">{member.bio}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

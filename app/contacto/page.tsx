@@ -121,7 +121,8 @@ export default function ContactoPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-lg">{card.content}</p>
-                <p className="text-sm text-muted-foreground mt-1">{card.detail}</p>
+                <p className="text-sm text-muted-foreground mt-1 whitespace-pre-line">{card.detail}</p>
+
               </CardContent>
             </Card>
           </motion.div>
@@ -291,8 +292,8 @@ const contactCards = [
   {
     title: "Teléfono",
     description: "Llámanos directamente",
-    content: "+123 456 7890",
-    detail: "Lunes a Viernes: 9am - 6pm",
+    content: "+569 97806420\n+569 49647318",
+    detail: "Lunes a Viernes: 8:30am - 18:00pm",
     icon: Phone,
   },
   {
@@ -305,8 +306,8 @@ const contactCards = [
   {
     title: "Dirección",
     description: "Visita nuestra tienda",
-    content: "Av. Principal 123, Ciudad",
-    detail: "Lunes a Sábado: 10am - 8pm",
+    content: "Sotomayor 300, Nueva Imperial",
+    detail: "Lunes a Viernes: 8:30am - 18:00pm \nSábado: 10:00am - 14:00pm",
     icon: MapPin,
   },
 ]
