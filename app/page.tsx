@@ -270,19 +270,19 @@ const featuredProducts = [
   {
     id: "tele",
     name: "Mueble TV Raíz Natural",
-    price: "1,299",
+    price: "189.990 CLP",
     image: "/tele1.png?height=400&width=400",
   },
   {
     id: "camarote",
     name: "Camarote Raíz Doble",
-    price: "899",
+    price: "219.990 CLP",
     image: "/camarote1.png?height=400&width=400",
   },
   {
     id: "cocina1",
     name: "Cocina Raíz Noble",
-    price: "299",
+    price: "249.990 CLP",
     image: "/cocina1.png?height=400&width=400",
   },
 ]

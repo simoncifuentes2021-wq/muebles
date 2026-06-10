@@ -183,7 +183,7 @@ export default function ProductDetailPage() {
               <div className="rounded-full bg-primary/10 p-1">
                 <Truck className="h-4 w-4 text-primary" />
               </div>
-              <span>Envío gratuito en pedidos superiores a $999</span>
+              <span>Envío gratuito en pedidos superiores a $99.990 CLP</span>
             </motion.div>
           </div>
 
@@ -298,7 +298,7 @@ const products = [
     id: "tele",
     name: "Mueble TV Raíz Natural",
     category: "Sala",
-    price: "1,299",
+    price: "189.990 CLP",
     description: "Sofá de 3 plazas con tapizado premium y estructura de madera maciza.",
     fullDescription:
       "Este elegante mueble de TV está fabricado en madera sólida con un acabado natural que resalta su veta y calidez. Cuenta con un diseño funcional y minimalista que incluye dos puertas laterales con espacio de almacenamiento interno, un cajón central amplio ideal para guardar accesorios, y una repisa abierta perfecta para decodificadores, consolas o libros. Su estilo atemporal lo hace ideal para salas modernas o rústicas, combinando estética y practicidad en un solo mueble.",
@@ -321,7 +321,7 @@ const products = [
     id: "cocina1",
     name: "Cocina Raíz Noble",
     category: "Comedor",
-    price: "399",
+    price: "249.990 CLP",
     description: "Silla elegante con asiento de cuero y estructura metálica.",
     fullDescription:
       "Este práctico y resistente mueble de cocina está fabricado en madera natural y cuenta con un diseño funcional que incluye un lavaplatos doble de acero inoxidable, tres cajones laterales para utensilios y dos puertas con amplio espacio interior para almacenamiento. Ideal para optimizar el orden en cocinas pequeñas o medianas, su estructura robusta y acabado cálido lo convierten en una opción duradera y decorativa para cualquier hogar.",
@@ -343,7 +343,7 @@ const products = [
     id: "cocina2",
     name: "Cocina Natura Loft",
     category: "Comedor",
-    price: "899",
+    price: "229.990 CLP",
     description: "Mesa de comedor estilo industrial con superficie de madera y patas metálicas.",
     fullDescription:
       "Este mueble de cocina combina funcionalidad y diseño natural en un solo producto. Fabricado en madera maciza con un atractivo acabado rústico, cuenta con un lavaplatos doble de acero inoxidable, tres cajones deslizables ideales para utensilios o implementos pequeños, y una puerta lateral con espacio interior para almacenamiento. Es una solución práctica y estética para cocinas que buscan orden, durabilidad y calidez visual.",
@@ -365,7 +365,7 @@ const products = [
     id: "comoda",
     name: "Cómoda Luna Clara",
     category: "Dormitorio",
-    price: "1990",
+    price: "119.990 CLP",
     description: "Lámpara de mesa de diseño minimalista con base de concreto.",
     fullDescription:
       "Organiza tus espacios con estilo y funcionalidad gracias a esta elegante cómoda de 4 cajones. Su diseño combina un cuerpo en tono blanco con frentes de cajón en melamina tipo madera clara, logrando un acabado moderno y cálido que se adapta a cualquier ambiente. Cada cajón cuenta con tiradores metálicos curvos de fácil agarre y correderas suaves que aseguran una apertura cómoda y silenciosa. Perfecta para guardar ropa, accesorios o artículos personales, esta cómoda destaca por su firmeza, buena capacidad de almacenamiento y estética sencilla pero refinada. Ideal para dormitorios, salas o cualquier rincón que necesite orden y diseño.",
@@ -387,7 +387,7 @@ const products = [
     id: "velador",
     name: "Velador Luna Nórdica",
     category: "Dormitorio",
-    price: "499",
+    price: "49.990 CLP",
     description: "Estante flotante con estantes de vidrio y estructura metálica.",
     fullDescription:
       "Este velador de diseño contemporáneo es la solución perfecta para mantener el orden en tu dormitorio sin sacrificar estilo. Con una estructura robusta en color blanco y detalles en tono madera clara con bordes oscuros, ofrece un atractivo contraste visual. Cuenta con un cajón amplio con tirador negro, ideal para guardar objetos personales, y una repisa inferior abierta que permite almacenar libros, accesorios o elementos decorativos. Su tamaño compacto lo hace ideal para espacios reducidos, pero su diseño moderno y funcionalidad lo convierten en un mueble versátil que encaja en cualquier ambiente. Fabricado en melamina de alta calidad, es fácil de limpiar y resistente al uso diario.",
@@ -409,7 +409,7 @@ const products = [
     id: "camarote",
     name: "Camarote Raíz Doble",
     category: "Dormitorio",
-    price: "799",
+    price: "219.990 CLP",
     description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
     fullDescription:
       "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
@@ -432,7 +432,7 @@ const products = [
     id: "cocina3",
     name: "Mueble Cocina Nogal",
     category: "Comedor",
-    price: "799",
+    price: "269.990 CLP",
     description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
     fullDescription:
       "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
@@ -456,7 +456,7 @@ const products = [
     id: "cocina4",
     name: "Mueble Modular Gris Claro",
     category: "Comedor",
-    price: "799",
+    price: "159.990 CLP",
     description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
     fullDescription:
       "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
@@ -479,7 +479,7 @@ const products = [
     id: "9",
     name: "Mueble Cocina Nogal",
     category: "Comedor",
-    price: "799",
+    price: "289.990 CLP",
     description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
     fullDescription:
       "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
@@ -502,7 +502,7 @@ const products = [
     id: "10",
     name: "Closet Raíz Elegante",
     category: "Dormitorio",
-    price: "799",
+    price: "199.990 CLP",
     description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
     fullDescription:
       "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
@@ -525,7 +525,7 @@ const products = [
     id: "11",
     name: "Closet Roble",
     category: "Dormitorio",
-    price: "799",
+    price: "179.990 CLP",
     description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
     fullDescription:
       "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
@@ -548,7 +548,7 @@ const products = [
     id: "12",
     name: "Mueble Lavaplatos Veta Clara",
     category: "Dormitorio",
-    price: "799",
+    price: "149.990 CLP",
     description: "Silla ergonómica con respaldo reclinable y soporte lumbar ajustable.",
     fullDescription:
       "Esta silla ergonómica es perfecta para largas horas de trabajo, con un diseño que proporciona un soporte adecuado para la espalda y el cuello. El respaldo es reclinable y el asiento ajustable en altura.",
